@@ -1,18 +1,15 @@
 <h1 align="center">🌦️ Weather App</h1>
 
-<p align="center">
-  <img src="![image](https://github.com/i-Swati/Weather-App/assets/137554521/905cdfdf-8764-4f28-b38f-fefba2449f14)">
-</p>
+
+ ![image](https://github.com/i-Swati/Weather-App/assets/137554521/905cdfdf-8764-4f28-b38f-fefba2449f14)
+
 
 <p align="center">
   An intuitive weather app built with HTML, CSS, and JavaScript, powered by the OpenWeatherMap API for accurate weather forecasts.
 </p>
 
-## 📷 Screenshots
-
-<p align="center">
+## 📷 Screenshot
   ![image](https://github.com/i-Swati/Weather-App/assets/137554521/74f334e1-6f8a-40bd-ae9e-9e5f8ac7a0f2)
-</p>
 
 
 
