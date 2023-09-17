@@ -11,7 +11,7 @@
 ## 📷 Screenshots
 
 <p align="center">
-  <img src=![Uploading image.png…]()>
+  ![image](https://github.com/i-Swati/Weather-App/assets/137554521/74f334e1-6f8a-40bd-ae9e-9e5f8ac7a0f2)
 </p>
 
 
