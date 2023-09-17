@@ -1,7 +1,8 @@
 <h1 align="center">🌦️ Weather App</h1>
 
 <p align="center">
-  <img src="weather-app-screenshot.png" alt="Weather App Screenshot">
+  <img src="![image](https://github.com/i-Swati/Weather-App/assets/137554521/905cdfdf-8764-4f28-b38f-fefba2449f14)
+">
 </p>
 
 <p align="center">
