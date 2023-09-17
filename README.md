@@ -12,12 +12,10 @@
 ## 📷 Screenshots
 
 <p align="center">
-  <img src="https://github.com/i-Swati/Weather-App/assets/137554521/88d9d5df-398d-43f3-872a-a09df1ec2d71" alt="Screenshot 1">
+  <img src=![Uploading image.png…]()
+alt="Screenshot 1">
 </p>
 
-<p align="center">
-  <img src="https://github.com/i-Swati/Weather-App/assets/137554521/f09de5d6-21c5-43ae-b2e8-1da8feeebbfc" alt="Screenshot 2">
-</p>
 
 
 
