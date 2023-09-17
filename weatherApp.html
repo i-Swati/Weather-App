@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherApp.css">
+</head>
+<title>Weather App</title>
+    <style>
+    .main {
+        text-align:center;
+        font-family:"Times New Roman";
+    }
+    .marq {
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+    .geek1 {
+        font-size:36px;
+        font-weight:bold;
+        color:white;
+        text-align:center;
+    }
+    .geek2 {
+        font-size:28px;
+        color:black;
+        text-align:right;
+        font-family: forte;  
+        margin-right: 20px;  
+        }
+</style>
+<body class="background">
+    <div class = "main">
+        <marquee class="marq" bgcolor="Black" behaviour="slide" direction="right" scrollamount="10" loop="infinite">
+            <div class="geek1">Weather App</div>  
+        </marquee>
+        </div>     
+        <div class="geek2">-by Swati</div>
+<div class="card">
+    <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" style="text-align: center;">
+        <button><img src="images/search.png" style="width: 50px; height: 50px;"></button>
+    </div>
+    <div class="weather">
+        <img src="images/rain.png" class="weather-icon" style="width: 320px; height: 320px;">
+        <h1 class="description">Clear Sky</h1>
+        <h2 class="temp">22°C</h2>
+        <h3 class="city">New York</h3>
+        <div class="popup">
+            <div class="popup-content">
+                <p class="popup-message">Invalid city name. Please enter a valid city name.</p>
+            </div>
+        </div>
+        
+       <div class="details">
+            <div class="col">
+                <img src="images/humidity.png" style="width: 50px; height: 50px;">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/wind.png" style="width: 50px; height: 50px;">
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        <div class="details">
+            <div class="col">
+                <img src="images/visibility.png" style="width: 50px; height: 50px;">
+                <div>
+                    <p class="visibility">2.3 km</p>
+                    <p>Visibility</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/pressure.jpg" style="width: 50px; height: 50px;">
+                <div>
+                    <p class="pressure">1003 mb</p>
+                    <p>Pressure</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const apiKey= "868f4a9e3c0e9f113479020eeb36fc8d";
+const apiUrl="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox=document.querySelector(".search input");
+const searchButton=document.querySelector(".search button");
+const weatherIcon=document.querySelector(".weather-icon");
+
+async function checkWeather(city){
+    const response=await fetch(apiUrl + city + `&appid=${apiKey}`)
+    var data=await response.json();
+
+ 
+
+const popup = document.querySelector(".popup");
+const popupMessage = document.querySelector(".popup-message");
+
+if (data.cod === "404") {
+    // City not found, show the popup warning message
+    popupMessage.textContent = "Invalid city name. Please enter a valid city name.";
+    popup.style.display = "block";
+    searchBox.classList.add("shake");
+
+    // Hide the popup after 3 seconds (3000 milliseconds)
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 3000);
+} else {
+    // City found, remove the "shake" class if it was added previously
+    searchBox.classList.remove("shake");
+
+    document.querySelector(".city").innerHTML=data.name;
+    document.querySelector(".temp").innerHTML=Math.round(data.main.temp) + "°C";
+    document.querySelector(".humidity").innerHTML=data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML=data.wind.speed + " km/h";
+    document.querySelector(".visibility").innerHTML=data.visibility/1000 + " km";
+    document.querySelector(".pressure").innerHTML=data.main.pressure + " mb";
+    document.querySelector(".description").innerHTML = data.weather[0].main;
+
+    if(data.weather[0].main=="Clouds"){
+        weatherIcon.src="images/cloud1.png";
+        weatherIcon.style.width = "450px";
+        weatherIcon.style.height = "420px";
+    }
+    
+    else if(data.weather[0].main=="Rain"){
+        weatherIcon.src="images/rain1.png";
+        weatherIcon.style.width = "400px";
+        weatherIcon.style.height = "400px";
+    }
+    else if (data.weather[0].main == "Mist") {
+    weatherIcon.src = "images/mist.png";
+    weatherIcon.style.width = "450px";
+    weatherIcon.style.height = "300px";
+    }
+    else if(data.weather[0].main=="Clear"){
+        weatherIcon.src="images/clear.png";
+        weatherIcon.style.width = "450px";
+        weatherIcon.style.height = "350px";
+    }
+    else if(data.weather[0].main=="Snow"){
+        weatherIcon.src="images/snow.png";
+    }
+    else if(data.weather[0].main=="Haze"){
+        weatherIcon.src="images/haze.png";
+        weatherIcon.style.width = "450px";
+        weatherIcon.style.height = "350px";
+    }
+    else if(data.weather[0].main=="Thunderstorm"){
+        weatherIcon.src="images/thunderstorm.png";
+        weatherIcon.style.width = "400px";
+        weatherIcon.style.height = "400px";
+}
+else if(data.weather[0].main=="Drizzle"){
+        weatherIcon.src="images/drizzle1.png";
+    }
+}
+}
+
+
+searchButton.addEventListener("click", ()=>{
+
+
+
+checkWeather(searchBox.value);
+
+})
+
+</script>
+
+
+
+
+</body>
+</html>
