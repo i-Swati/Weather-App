@@ -1,8 +1,7 @@
 <h1 align="center">🌦️ Weather App</h1>
 
 <p align="center">
-  <img src="![image](https://github.com/i-Swati/Weather-App/assets/137554521/905cdfdf-8764-4f28-b38f-fefba2449f14)
-">
+  <img src="![image](https://github.com/i-Swati/Weather-App/assets/137554521/905cdfdf-8764-4f28-b38f-fefba2449f14)">
 </p>
 
 <p align="center">
@@ -12,8 +11,7 @@
 ## 📷 Screenshots
 
 <p align="center">
-  <img src=![Uploading image.png…]()
-alt="Screenshot 1">
+  <img src=![Uploading image.png…]()>
 </p>
 
 
