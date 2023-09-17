@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  An intuitive weather app built with HTML, CSS, and JavaScript, powered by the OpenWeatherMap API to provide current weather information for your location.
+  An intuitive weather app built with HTML, CSS, and JavaScript, powered by the OpenWeatherMap API to provide current and accurate weather information for your location.
 
 </p>
 
