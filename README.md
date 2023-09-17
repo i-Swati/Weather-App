@@ -9,11 +9,6 @@
 
 </p>
 
-## 📷 Screenshot
-  ![image](https://github.com/i-Swati/Weather-App/assets/137554521/74f334e1-6f8a-40bd-ae9e-9e5f8ac7a0f2)
-
-
-
 
 ## 🚀 Features
 
@@ -29,6 +24,9 @@
 2. Enter the name of your city or location in the search bar.
 3. Click the "Search" button or press Enter.
 4. View detailed weather information for the specified location.
+
+## 📷 Screenshot
+  ![image](https://github.com/i-Swati/Weather-App/assets/137554521/74f334e1-6f8a-40bd-ae9e-9e5f8ac7a0f2)
 
 ## 🌐 APIs Used
 
